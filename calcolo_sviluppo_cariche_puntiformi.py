@@ -26,7 +26,7 @@ esempio_3 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [0,0,0,-2*q]]) #quadrupolo 
 
 
 
-vettore_cariche = esempio_2 #in questo caso il vettore è [r,theta,phi, q]
+vettore_cariche = esempio_2 #in questo caso il vettore e' [r,theta,phi, q]
 file_out = 'sviluppo.tex'       # su quale file .tex vuoi scrivere
 ordine = 2                      #ordine a cui fermare lo sviluppo
 
@@ -61,7 +61,7 @@ ordine = 2                      #ordine a cui fermare lo sviluppo
 
 
 def polinomio_Legendre(l):
-    if not (isinstance(l, int)): ## controlla se il valore inserito è un intero
+    if not (isinstance(l, int)): ## controlla se il valore inserito e' un intero
         print('Solo valori interi per i polinomi di legendre, pota')
         return
     y = (x**2-1)**l
