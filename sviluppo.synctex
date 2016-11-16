@@ -1,0 +1,180 @@
+SyncTeX Version:1
+Input:1:sviluppo.tex
+Input:2:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls
+Input:3:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo
+Input:4:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty
+Input:5:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def
+Input:6:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty
+Input:7:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def
+Input:8:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu
+Input:9:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu
+Input:10:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu
+Input:11:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty
+Input:12:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg
+Input:13:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-italian\italian.ldf
+Input:14:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def
+Input:15:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
+Input:16:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+Input:17:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+Input:18:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty
+Input:19:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty
+Input:20:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
+Input:21:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+Input:22:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+Input:23:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+Input:24:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty
+Input:25:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg
+Input:26:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def
+Input:27:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty
+Input:28:C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty
+Input:29:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+Input:30:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+Input:31:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+Input:32:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+Input:33:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+Input:34:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty
+Input:35:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
+Input:36:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty
+Input:37:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def
+Input:38:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.def
+Input:39:sviluppo.aux
+Input:40:C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
+Input:41:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
+Input:42:C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
+Output:pdf
+Magnification:1000
+Unit:1
+X Offset:0
+Y Offset:0
+Content:
+!3016
+{1
+[1,16:4736286,47378389:28548188,42642103,0
+[1,16:5873801,47378389:27410673,43157435,0
+[1,16:5873801,5007386:27410673,786432,0
+h1,16:5873801,5007386:27410673,0,0
+]
+[1,16:5873801,45412309:27410673,38766523,0
+h1,12:5873801,7366682:0,0,0
+(1,12:5873801,10243716:27410673,786432,220273
+k1,12:8427668,10243716:2553867
+(1,12:8427668,10243716:0,0,0
+g1,12:8427668,10243716
+g1,12:8427668,10243716
+g1,12:8068858,10243716
+h1,12:8068858,10243716:0,0,0
+g1,12:8427668,10243716
+)
+x1,12:13470249,10243716
+g1,12:13812125,10243716
+x1,12:14673368,10243716
+g1,12:15015244,10243716
+x1,12:18650815,10243716
+x1,12:19659968,10243716
+g1,12:20001844,10243716
+x1,12:22325251,10243716
+x1,12:23334404,10243716
+g1,12:23676280,10243716
+x1,12:25339603,10243716
+g1,12:25681479,10243716
+x1,12:29869364,10243716
+g1,12:30211240,10243716
+x1,12:30730607,10243716
+g1,12:30730607,10243716
+k1,12:33284474,10243716:2553867
+)
+(1,12:5873801,12237651:27410673,642250,275254
+k1,12:19185921,12237651:13312120
+h1,12:19185921,12237651:0,0,0
+(1,12:19185921,12237651:786432,642250,275254
+$1,12:19185921,12237651
+[1,12:19185921,12237651:786432,642250,275254
+(1,12:19185921,12237651:786432,642250,275254
+g1,12:19185921,12237651
+(1,12:19185921,12237651:786432,642250,275254
+r1,12:19185921,12237651:0,917504,275254
+g1,12:19579137,12237651
+g1,12:19579137,12237651
+g1,12:19972353,12237651
+)
+g1,12:19972353,12237651
+)
+]
+$1,12:19972353,12237651
+)
+g1,12:19972353,12237651
+k1,12:33284473,12237651:13312120
+)
+(1,12:5873801,13846562:27410673,546132,0
+k1,12:16563147,13846562:10689346
+h1,12:16563147,13846562:0,0,0
+x1,12:17333187,13846562
+g1,12:17589867,13846562
+x1,12:18402687,13846562
+x1,12:18787707,13846562
+x1,12:19750257,13846562
+x1,12:20798367,13846562
+g1,12:21055047,13846562
+x1,12:22595127,13846562
+g1,12:22595127,13846562
+k1,12:33284473,13846562:10689346
+)
+(1,15:5873801,16600715:27410673,0,0
+h1,15:5873801,16600715:1114112,0,0
+k1,15:33284473,16600715:26296560
+g1,15:33284473,16600715
+)
+(1,15:17900885,17614190:3356505,947939,492251
+(1,15:17900885,17614190:895422,947939,492251
+(1,15:17900885,17614190:895422,947939,492251
+h1,15:17900885,17614190:78643,0,0
+[1,15:17979528,17614190:738136,947939,492251
+(1,15:17979528,17128716:738136,462465,0
+x1,15:18717664,17128716
+)
+(1,15:17979528,18106441:738136,545187,0
+k1,15:18021099,18106441:41571
+x1,15:18344859,18106441
+(1,15:18364793,17899129:311300,337875,0
+x1,15:18643325,17899129
+)
+k1,15:18717664,18106441:41571
+)
+]
+h1,15:18717664,17614190:78643,0,0
+)
+)
+x1,15:19116662,17614190
+g1,15:19262010,17614190
+(1,15:19262010,17614190:960813,308974,0
+x1,15:20222823,17614190
+)
+g1,15:20342424,17614190
+(1,15:20342424,17614190:914966,538213,179405
+(1,15:20342424,17614190:914966,538213,179405
+(1,15:20342424,17614191:279075,538214,179404
+x1,15:20621499,17614191
+)
+x1,15:20958381,17614190
+(1,15:20978315,17614191:279075,538214,179404
+x1,15:21257390,17614191
+)
+)
+)
+)
+]
+(1,16:5873801,47378389:27410673,462465,0
+k1,16:19399733,47378389:13525932
+x1,16:19758543,47378389
+k1,16:33284475,47378389:13525932
+)
+]
+]
+!2991
+}1
+Input:43:sviluppo.aux
+!31
+Postamble:
+Count:96
+!24
+Post scriptum:
