@@ -8,11 +8,12 @@ from sympy import Integral, latex
 import numpy
 
 x = symbols('x')
-R = symbols('r')
-q = symbols('q')
-a = symbols('a')
-theta = symbols('theta') 
-phi = symbols('phi')
+R = symbols('r', real=True)
+q = symbols('q', real=True)
+a = symbols('a', real=True)
+theta = symbols('theta', real=True) 
+phi = symbols('phi', real=True)
+
 
 
 
@@ -25,11 +26,11 @@ esempio_3 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [0,0,0,-2*q]]) #quadrupolo 
 
 
 
+vettore_cariche = esempio_2 #in questo caso il vettore è [r,theta,phi, q]
+rho = 0
 
-vettore_cariche = esempio_2 #in questo caso il vettore e' [r,theta,phi, q]
 file_out = 'sviluppo.tex'       # su quale file .tex vuoi scrivere
-ordine = 2                      #ordine a cui fermare lo sviluppo
-
+ordine = 2                     #ordine a cui fermare lo sviluppo
 
 
 
@@ -58,10 +59,8 @@ ordine = 2                      #ordine a cui fermare lo sviluppo
 
 
 
-
-
 def polinomio_Legendre(l):
-    if not (isinstance(l, int)): ## controlla se il valore inserito e' un intero
+    if not (isinstance(l, int)): ## controlla se il valore inserito è un intero
         print('Solo valori interi per i polinomi di legendre, pota')
         return
     y = (x**2-1)**l
@@ -109,33 +108,69 @@ def armonica_sferica(l,m):
     y = y * sympy.exp(sympy.I * m *phi)
     return y
 
+# 
+# def coefficiente_sviluppo_puntif(l,m,r,theta_v,phi_v):
+#     z = r**l*armonica_sferica(l,-m)*(-1)**m
+#     z = z.subs(theta, theta_v)
+#     z = z.subs(phi, phi_v)
+#     z = z * 4*sympy.pi/(2*l+1)
+#     return z
 
-def coefficiente_sviluppo(l,m,r,theta_v,phi_v):
-    z = r**l*armonica_sferica(l,-m)*(-1)**m
-    z = z.subs(theta, theta_v)
-    z = z.subs(phi, phi_v)
-    z = z * 4*sympy.pi/(2*l+1)
+
+# def calcolo_sviluppo_puntif(l, punti):
+#     print('Sviluppo cariche puntiformi')
+#     sviluppo = x
+#     sviluppo = sviluppo - x
+#     for i in range(0,l+1):
+#         print('Faccio l = %d' %(i))
+#         for j in range(0,i+1):
+#             print('Faccio m = %d' %(j))
+#             for h in range(0,len(punti)):
+#                 pota = coefficiente_sviluppo_puntif(i,j, punti[h][0], punti[h][1], punti[h][2])
+#                 ylm = armonica_sferica(i,j)
+#                 if (not j==0):
+#                     sviluppo = sviluppo + punti[h][3]*( 2*re(pota*ylm) )/R**(i+1)
+#                 else:
+#                     sviluppo = sviluppo + punti[h][3]*( pota*ylm ) /R**(i+1)
+#                 
+#     return sviluppo
+#     
+def coefficiente_sviluppo(l, m, densita):
+    z = armonica_sferica(l,-m)*(-1)**m*sympy.sin(theta)
+    z = z * R**l*densita
+    print('integrale')
+    z = integrate(z,( phi, 0, 2*sympy.pi))
+    print('integrale')
+    z = integrate(z, (theta, 0, sympy.pi))
+    print('integrale')
+    z = integrate(z, (R, 0, oo))
+    print('integrale finito')
+    z = z * (4*sympy.pi)/(2*l+1)
     return z
 
 
-def calcolo_sviluppo(l, punti):
+def calcolo_sviluppo(l, densita):
+    print('Sviluppo densita')
     sviluppo = x
     sviluppo = sviluppo - x
     for i in range(0,l+1):
         print('Faccio l = %d' %(i))
         for j in range(-i,i+1):
             print('Faccio m = %d' %(j))
-            for h in range(0,len(punti)):
-                pota = coefficiente_sviluppo(i,j, punti[h][0], punti[h][1], punti[h][2])
-                ylm = armonica_sferica(i,j)
-                if (not j==0):
-                    sviluppo = sviluppo + punti[h][3]*( 2*re(pota*ylm) )/R**(i+1)
-                else:
-                    sviluppo = sviluppo + punti[h][3]*( pota*ylm ) /R**(i+1)
+            sviluppo = sviluppo + coefficiente_sviluppo(i,j,densita)*armonica_sferica(i,j)/R**(i+1)
+                
     
     return sviluppo
-    
-    
+
+
+
+def vec_to_delta(vec):
+    return vec[3]*DiracDelta(R-vec[0])*DiracDelta(cos(theta) - sympy.cos(vec[1])) * DiracDelta(phi - vec[2])/R**2
+
+
+
+
+
 
 def output_latex(espressione):
     scrittura = open(file_out, 'w')
@@ -146,11 +181,21 @@ def output_latex(espressione):
     scrittura.write('\[ %s \] \n' %(latex(espressione)))
     scrittura.write('\\end{document} \n ')
     scrittura.close()    
+
+
+
+for i in range(0,len(vettore_cariche)):
+    rho = rho + vec_to_delta(vettore_cariche[i])
     
+
+
+
+
+
     
     
 
-espr = calcolo_sviluppo(ordine, vettore_cariche)
+espr = calcolo_sviluppo(ordine, rho)# + calcolo_sviluppo_rho(ordine, rho)
 output_latex(espr)
 
     

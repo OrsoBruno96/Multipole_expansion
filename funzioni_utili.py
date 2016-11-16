@@ -7,57 +7,13 @@ from sympy.abc import theta, phi
 from sympy import Integral, latex
 import numpy
 
+
 x = symbols('x')
 R = symbols('r', real=True)
 q = symbols('q', real=True)
 a = symbols('a', real=True)
 theta = symbols('theta', real=True) 
 phi = symbols('phi', real=True)
-
-
-
-#############  QUI I DATI DA INSERIRE ############
-
-esempio_1 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [a,sympy.pi/2, 0, q], [a,sympy.pi/2, sympy.pi/2, q], [a,sympy.pi/2, sympy.pi, q], [a,sympy.pi/2, 3*sympy.pi/2, q], [0,0,0,-6*q] ]) #6 cariche sugli assi cartesiani a distanza a dal centro e una in mezzo -6q
-esempio_2 = numpy.array([[a,0,0,q],[a,sympy.pi,0,-q]]) #classico dipolo elettrico
-esempio_3 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [0,0,0,-2*q]]) #quadrupolo classico
-
-
-
-
-vettore_cariche = esempio_3 #in questo caso il vettore è [r,theta,phi, q]
-rho = q/(4*sympy.pi/3*a**3)*Heaviside(a-R)
-
-
-
-file_out = 'sviluppo.tex'       # su quale file .tex vuoi scrivere
-ordine = 4                     #ordine a cui fermare lo sviluppo
-
-
-
-
-########## FINE DATI DA INSERIRE ###########
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##########################################
-#####   QUESTO E' IL PROGRAMMA ###########
-##########################################
-
 
 
 
@@ -168,12 +124,7 @@ def calcolo_sviluppo_rho(l, densita):
 
 
 
-
-
-
-
-
-def output_latex(espressione):
+def output_latex(espressione, file_out, ordine):
     scrittura = open(file_out, 'w')
     scrittura.write('\\documentclass[11pt]{article} \n\\usepackage[T1]{fontenc} \n\\usepackage[utf8]{inputenc} \n')
     scrittura.write('\\usepackage[italian]{babel} \n\\usepackage[a4paper]{geometry} \n\\usepackage[pdftex]{graphicx} \n')
@@ -183,10 +134,4 @@ def output_latex(espressione):
     scrittura.write('\\end{document} \n ')
     scrittura.close()    
     
-    
-    
-
-espr = calcolo_sviluppo_puntif(ordine, vettore_cariche)# + calcolo_sviluppo_rho(ordine, rho)
-output_latex(espr)
-
     
