@@ -115,12 +115,22 @@ def calcolo_sviluppo_rho(l, densita):
     sviluppo = sviluppo - x
     for i in range(0,l+1):
         print('Faccio l = %d' %(i))
-        for j in range(-i,i+1):
+        for j in range(0,i+1):
             print('Faccio m = %d' %(j))
-            sviluppo = sviluppo + coefficiente_sviluppo_rho(i,j,densita)*armonica_sferica(i,j)/R**(i+1)
+	    pota = coefficiente_sviluppo_rho(i,j,densita)
+	    ylm = armonica_sferica(i,j)
+	    if (not j==0):
+		    sviluppo = sviluppo + ( 2*re(pota*ylm) )/R**(i+1)
+            else:
+		    sviluppo = sviluppo + ( pota*ylm ) /R**(i+1)
+
                 
     
     return sviluppo
+
+
+
+
 
 
 

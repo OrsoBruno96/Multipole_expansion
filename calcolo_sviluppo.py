@@ -17,8 +17,8 @@ esempio_4 = numpy.array([[a,sympy.acos(1/sympy.sqrt(3)), 0, q], [a, sympy.acos(1
 
 
 
-vettore_cariche = esempio_4 #in questo caso il vettore e' [r,theta,phi, q]
-rho = 0.
+vettore_cariche = esempio_2 #in questo caso il vettore e' [r,theta,phi, q]
+
 
 
 
@@ -35,6 +35,6 @@ ordine = 4                    #ordine a cui fermare lo sviluppo
 ##########################################
     
 
-espr = calcolo_sviluppo_puntif(ordine, vettore_cariche)# + calcolo_sviluppo_rho(ordine, rho)
+espr = calcolo_sviluppo_puntif(ordine, vettore_cariche)
 output_latex(espr, file_out, ordine)
 
