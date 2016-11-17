@@ -20,7 +20,7 @@ phi = symbols('phi', real=True)
 
 
 def polinomio_Legendre(l):
-    if not (isinstance(l, int)): ## controlla se il valore inserito è un intero
+    if not (isinstance(l, int)): ## controlla se il valore inserito e' un intero
         print('Solo valori interi per i polinomi di legendre, pota')
         return
     y = (x**2-1)**l

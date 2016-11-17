@@ -12,17 +12,18 @@ from funzioni_utili import *
 esempio_1 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [a,sympy.pi/2, 0, q], [a,sympy.pi/2, sympy.pi/2, q], [a,sympy.pi/2, sympy.pi, q], [a,sympy.pi/2, 3*sympy.pi/2, q], [0,0,0,-6*q] ]) #6 cariche sugli assi cartesiani a distanza a dal centro e una in mezzo -6q
 esempio_2 = numpy.array([[a,0,0,q],[a,sympy.pi,0,-q]]) #classico dipolo elettrico
 esempio_3 = numpy.array([[a,0,0,q],[a,sympy.pi,0,q], [0,0,0,-2*q]]) #quadrupolo classico
+esempio_4 = numpy.array([[a,sympy.acos(1/sympy.sqrt(3)), 0, q], [a, sympy.acos(1/sympy.sqrt(3)), sympy.pi/2, q], [a, sympy.acos(1/sympy.sqrt(3)), sympy.pi, q], [a, sympy.acos(1/sympy.sqrt(3)), 3*sympy.pi/2, q],[a,sympy.pi-sympy.acos(1/sympy.sqrt(3)), 0, q], [a, sympy.pi-sympy.acos(1/sympy.sqrt(3)), sympy.pi/2, q], [a, sympy.pi-sympy.acos(1/sympy.sqrt(3)), sympy.pi, q], [a, sympy.pi-sympy.acos(1/sympy.sqrt(3)), 3*sympy.pi/2, q] ] ) # cubo di cariche puntiformi
 
 
 
 
-vettore_cariche = esempio_3 #in questo caso il vettore è [r,theta,phi, q]
-rho = q/(4*sympy.pi/3*a**3)*Heaviside(a-R)
+vettore_cariche = esempio_4 #in questo caso il vettore e' [r,theta,phi, q]
+rho = 0.
 
 
 
 file_out = 'sviluppo.tex'       # su quale file .tex vuoi scrivere
-ordine = 2                     #ordine a cui fermare lo sviluppo
+ordine = 4                    #ordine a cui fermare lo sviluppo
 
 
 
